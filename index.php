@@ -38,7 +38,7 @@
         </div>
         <div class="mainBox col-lg-10 col-lg-offset-1 col-xs-12">
             <div class="col-lg-4 col-xs-12">
-                <a href="/images/bitcoin.php">
+                <a href="/bitcoin.php">
                     <div class="box box1">
                     </div>
                 </a>
