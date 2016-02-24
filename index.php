@@ -1,4 +1,4 @@
-<?php include('includes/head.php'); ?>
+<?php include('/includes/head.php'); ?>
         <div class="navbar col-xs-12 col-md-10 col-md-offset-1">
             <div class="title col-xs-10 col-xs-offset-1 col-lg-3 col-lg-offset-1">
                 <h1>
@@ -11,7 +11,7 @@
         </div>
         <div class="presentation col-xs-10 col-xs-offset-1">
             <div class="col-lg-2 divHomeImg">
-                <img class="homeImg" src="/sandbox/Yaiberry/images/developper.png" alt="">
+                <img class="homeImg" src="/images/developper.png" alt="">
             </div>
             <div class="col-lg-7 col-lg-offset-1 text1">
                 Hello, hello, hello to my humble website. You will find here some of the stuff I made, or at least links to it.
@@ -27,7 +27,7 @@
         </div>
         <div class="mainBox col-lg-10 col-lg-offset-1 col-xs-12">
             <div class="col-lg-4 col-xs-12">
-                <a href="/sandbox/Yaiberry/bitcoin.php">
+                <a href="/images/bitcoin.php">
                     <div class="box box1">
                     </div>
                 </a>
@@ -42,7 +42,7 @@
 
         </div>
 
-    <script type="text/javascript" src="includes/js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="/includes/js/jquery-2.2.0.min.js"></script>
     <script>
         $('.homeImg').toggle();
         $('.homeImg').fadeToggle(5000);
