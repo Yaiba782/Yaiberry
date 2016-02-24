@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="includes/bootstrap/bootstrap.min.css">
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' type='text/css'>
     </head>
-    <body class="content">';
+    <body class="content">
     <?php include_once("analyticstracking.php"); ?>
         <div class="navbar col-xs-12 col-md-10 col-md-offset-1">
             <div class="title col-xs-10 col-xs-offset-1 col-lg-3 col-lg-offset-1">
