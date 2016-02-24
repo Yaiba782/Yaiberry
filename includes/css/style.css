@@ -49,10 +49,10 @@
     margin-bottom:20px;
 }
 .box1{
-    background-image: url('/sandbox/Yaiberry/images/bitcoin.png');
+    background-image: url('/images/bitcoin.png');
 }
 .box2{
-    background-image: url('/sandbox/Yaiberry/images/github.png');
+    background-image: url('/images/github.png');
 }
 #input1, #input2{
     padding:10px;
