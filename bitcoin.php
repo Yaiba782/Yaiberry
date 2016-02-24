@@ -17,8 +17,17 @@
 
     </head>
     <body class="content">
-        <?php include_once("analyticstracking.php"); ?>
-        <div class="navbar col-xs-12 col-md-10 col-md-offset-1">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-74196136-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <div class="navbar col-xs-12 col-md-10 col-md-offset-1">
             <div class="title col-xs-10 col-xs-offset-1 col-lg-3 col-lg-offset-1">
                 <h1>
                     <a class="home" href="./">Yaiba</a>
