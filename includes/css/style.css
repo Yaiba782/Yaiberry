@@ -54,7 +54,7 @@
 .box2{
     background-image: url('/images/github.png');
 }
-#input1, #input2{
+input{
     padding:10px;
     margin:10px;
     border:none;
@@ -63,6 +63,22 @@
 #input1{
     border-bottom: solid 2px#414cff;
 }
-#input2{
+#input2,#input3{
     border-bottom:solid 2px #ffd000;
+}
+#input4{
+    border-bottom: solid 2px #555;
+}
+.eth-logo{
+    width:50px;
+    height:50px;
+}
+.qrcode{
+    position:relative;
+}
+.qrcode-img{
+    width:200px;
+}
+.wrap{
+    min-height: 80%;
 }
