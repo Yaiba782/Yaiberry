@@ -95,14 +95,14 @@
 
                 if ('eurtobtc' == currency){
                     var eth = (number/$('.data').data('eurtoeth'));
-                    $('#input4').val(eth.toFixed(3));
 
+                    $('#input4').val(eth.toFixed(3));
                     $('#valueIcon').removeClass();
                     $('#valueIcon').addClass('glyphicon-euro glyphicon');
                 }else{
                     var eth = (number/$('.data').data('usdtoeth'));
-                    $('#input4').val(eth.toFixed(3));
 
+                    $('#input4').val(eth.toFixed(3));
                     $('#valueIcon').removeClass();
                     $('#valueIcon').addClass('glyphicon-usd glyphicon');
                 }
@@ -111,17 +111,24 @@
             $('#input2').keyup(function(){
                 var currency = $('#currency').val()
                 var number = $(this).val();
-
-                $('#input4').val( (number/btctoeth).toFixed(3) );
-
                 var result = parseFloat(number/($('.data').data(currency)));
 
+                $('#input4').val( (number/btctoeth).toFixed(3) );
                 $('#input1').val(result.toFixed(2));
             });
             $('#input4').keyup(function(){
                 var currency = $('#currency').val()
                 var number = $(this).val();
 
+                $('#input2').val((number*btctoeth));
+
+                if ('eurtobtc' == currency){
+                    var eth = (number*$('.data').data('eurtoeth'));
+                    $('#input1').val(eth.toFixed(2));
+                }else{
+                    var eth = (number*$('.data').data('usdtoeth'));
+                    $('#input1').val(eth.toFixed(2));
+                }
 
             });
 
