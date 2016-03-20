@@ -1,19 +1,18 @@
 <?php
-    $eurToBtc = file_get_contents('https://blockchain.info/tobtc?currency=EUR&value=1');
-    $usdToBtc = file_get_contents('https://blockchain.info/tobtc?currency=USD&value=1');
-    $ethApi = file_get_contents('https://coinmarketcap-nexuist.rhcloud.com/api/eth');
 
-    /*
+    // Fetching API
+    $ethApi = file_get_contents('https://coinmarketcap-nexuist.rhcloud.com/api/eth');
     $btcApi = file_get_contents('https://coinmarketcap-nexuist.rhcloud.com/api/btc');
 
+    // Decoding the 'json' string
     $btcJson = json_decode($btcApi);
-
-    $eurToBtc = $btcJson->price->eur;
-    $usdToBtc = $btcJson->price->usd;
-    */
-
     $ethJson = json_decode($ethApi);
 
+    // BTC
+    $eurToBtc = $btcJson->price->eur;
+    $usdToBtc = $btcJson->price->usd;
+
+    // ETH
     $eurToEth = $ethJson->price->eur;
     $usdToEth = $ethJson->price->usd;
     $btcToEth = $ethJson->price->btc;
