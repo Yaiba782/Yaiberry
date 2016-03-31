@@ -1,5 +1,6 @@
+WIP !
 <?php
-
+    /*
     // Fetching API
     $ethApi = file_get_contents('https://coinmarketcap-nexuist.rhcloud.com/api/eth');
     $btcApi = file_get_contents('https://coinmarketcap-nexuist.rhcloud.com/api/btc');
@@ -133,4 +134,4 @@
 
         </script>
     </body>
-</html>
+</html>*/
