@@ -2531,3 +2531,15 @@
 			}
 
 	}
+
+@media screen and (min-width: 750px){
+	.box.style1.right .image img.bitcoin_image{
+		right:7%;
+	}
+	.box.style1.left .image img.github_image{
+		left:23%;
+	}
+	.box.style1.right .image img.ethereum_image{
+		right:26%;
+	}
+}
