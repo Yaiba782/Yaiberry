@@ -1,5 +1,4 @@
 <?php
-if(isset($_GET['d'])){
     /*
      *
      *  Fetching API
@@ -40,15 +39,17 @@ if(isset($_GET['d'])){
             <h1>Aproximacoin</h1>
         </header>
         <footer>
-        <p>
-            Welcome to the new version of the Aproximacoin.<br />
-            You can convert Euro, US Dollar to Bitcoin, and Ether.
-        </p>
+
             <a href="#banner" class="button style2 scrolly">Let's go</a>
         </footer>
     </section>
 
     <section id="banner" class="aproximacoin_banner">
+        <p>
+            Welcome to the new version of the Aproximacoin.<br />
+            You can convert Euro, US Dollar to Bitcoin, and Ether.
+        </p>
+
         <div class="col-xs-offset-4 col-xs-4">
             <select name="realCurrency" id="realCurrency">
                 <option value="eur" selected >EUR</option>
@@ -77,6 +78,15 @@ if(isset($_GET['d'])){
                 <li>&copy; Yaiba782. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                 <li>Data : coinmarketcap-nexuist.rhcloud.com/api</li>
             </ul>
+        </div>
+    </section>
+
+    <section id="donation">
+        <div class="copyright">
+            Feel free to comment on Github<br />
+            You can also donate Bitcoins here :<br />
+            <img src="images/vegetacat.gif" width="50" height="50" alt=""><br />
+            <img src="images/qrcode.png" alt="">
         </div>
     </section>
 
@@ -121,11 +131,3 @@ if(isset($_GET['d'])){
     </script>
     </body>
 </html>
-
-
-
-<?
-}else{
-    ?>
-    WIP !
-<?php } ?>
