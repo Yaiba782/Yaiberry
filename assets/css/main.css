@@ -2550,5 +2550,20 @@
 */
 .aproximacoin_banner{
 	background-color: rgba(247, 179, 33, 0.81) !important;/* Did a cat really die ?*/
-
+}
+#realCurrency{
+	background-color:#3498DB;
+	width:100px;
+	color:#FFF;
+}
+#realCurrency:hover{
+	background-color: #346eaf;
+}
+#cryptoCurrency{
+	background-color:#2ECC71;
+	width:100px;
+	color:#FFF;
+}
+#cryptoCurrency:hover{
+	background-color: #2faf5a;
 }
