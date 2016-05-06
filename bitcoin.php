@@ -33,7 +33,7 @@ if(isset($_GET['d'])){
     </script>
 
     <!-- Prices -->
-    <div data-btceur="<?php echo $btcJson->eur; ?>" data-etheur="<?php echo $ethJson->eur; ?>" data-btcusd="<?php echo $btcJson->usd; ?>" data-ethusd="<?php echo $ethJson->usd; ?>"></div>
+    <div id="prices" data-btceur="<?php echo $btcJson->eur; ?>" data-etheur="<?php echo $ethJson->eur; ?>" data-btcusd="<?php echo $btcJson->usd; ?>" data-ethusd="<?php echo $ethJson->usd; ?>"></div>
     <!-- Header -->
     <section id="header">
         <header>
@@ -50,21 +50,21 @@ if(isset($_GET['d'])){
 
     <section id="banner" class="aproximacoin_banner">
         <div class="col-xs-offset-4 col-xs-4">
-            <select name="realCurrency">
+            <select name="realCurrency" id="realCurrency">
                 <option value="eur" selected >EUR</option>
                 <option value="usd" >USD</option>
             </select>
         </div>
         <div class="col-xs-offset-4 col-xs-4 col-lg-offset-2 col-lg-2">
-            <input type="number" value="<?php echo $btcJson->eur; ?>" name="currValue">
+            <input type="number" value="<?php echo $btcJson->eur; ?>" name="realValue" id="realValue">
         </div>
         <div class="col-xs-offset-4 col-xs-4  col-lg-2">=</div>
         <div class="col-xs-offset-4 col-xs-4  col-lg-2">
-            <input type="number" name="btcValue" value="1">
+            <input type="number" name="cryptoValue" value="1" id="cryptoValue">
         </div>
         <div class="col-xs-offset-4 col-xs-4  col-lg-2"></div>
         <div class="col-xs-offset-4 col-xs-4">
-            <select name="cryptoCurrency">
+            <select name="cryptoCurrency" id="cryptoCurrency">
                 <option value="btc" selected >BTC</option>
                 <option value="eth" >ETH</option>
             </select>
@@ -79,6 +79,47 @@ if(isset($_GET['d'])){
             </ul>
         </div>
     </section>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        var realCurrency = "eur";
+        var cryptoCurrency = "btc";
+
+        // Checking wich real currency is selected by the user
+            $("#realCurrency").on("change",function(){
+                realCurrency = $(this).val();
+
+                // Changing the crypto value
+                var value = $("#realValue").val();
+                value = value/$("#prices").data(cryptoCurrency+realCurrency);
+                $("#cryptoValue").val(value);
+            });
+
+        // Checking wich crypto currency is selected by the user
+            $("#cryptoCurrency").on("change",function(){
+                cryptoCurrency = $(this).val();
+
+                // Changing the real value
+                var value = $("#cryptoValue").val();
+                value = value*$("#prices").data(cryptoCurrency+realCurrency);
+                $("#realValue").val(value);
+            });
+
+        // Changing the real value
+            $("#realValue").keyup(function(){
+                var value = $(this).val();
+                value = value/$("#prices").data(cryptoCurrency+realCurrency);
+                $("#cryptoValue").val(value);
+            });
+
+        // Changing the crypto value
+            $("#cryptoValue").keyup(function(){
+                var value = $(this).val();
+                value = value*$("#prices").data(cryptoCurrency+realCurrency);
+                $("#realValue").val(value);
+            });
+    </script>
+    </body>
 </html>
 
 
